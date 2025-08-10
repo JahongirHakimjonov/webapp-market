@@ -1,28 +1,32 @@
 import {useEffect} from "react"
 
-
 export function useBackButton(visible: boolean, onClick?: () => void) {
     useEffect(() => {
         const tg = (globalThis as any)?.Telegram?.WebApp
         const backButton = tg?.BackButton
 
-        // Check if BackButton is supported (>= 6.1)
+        // API versiya tekshirish (>= 6.1)
         const isSupported = (() => {
             if (!tg?.version) return false
-            const [major, minor] = tg.version.split('.').map(Number)
+            const [major, minor] = tg.version.split(".").map(Number)
             return major > 6 || (major === 6 && minor >= 1)
         })()
 
         if (!isSupported || !backButton) return
 
+        // WebApp tayyor bo‘lishini kutish
+        tg.ready?.()
+
         const handler = () => {
             if (typeof onClick === "function") onClick()
         }
 
+        // Avval eski handlerlarni tozalash
+        backButton.offClick?.(handler)
+
         if (visible) {
             try {
                 backButton.show?.()
-                // Use only the native BackButton click handler
                 backButton.onClick?.(handler)
             } catch (err) {
                 console.error("BackButton API error:", err)
