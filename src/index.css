@@ -249,11 +249,11 @@ body {
 
 
 .swatch {
-    color: var(--text);
+    color: var(--hint);
 }
 
 .swatch.selected {
-    color: var(--text);
+    color: var(--hint);
 }
 
 .skeleton {
