@@ -19,8 +19,8 @@ export default function App() {
     const navigate = useNavigate()
 
     // Show Telegram BackButton when we are NOT on "/" (home tab); use it to navigate to "/"
-    // const onHome = loc.pathname === "/"
-    useBackButton((loc.pathname === "/" || loc.pathname === "/search" || loc.pathname.startsWith("/categories") || loc.pathname === "/cart"), () => navigate("/"))
+    const onHome = loc.pathname === "/"
+    useBackButton(!onHome && (loc.pathname === "/" || loc.pathname === "/search" || loc.pathname.startsWith("/categories") || loc.pathname === "/cart"), () => navigate("/"))
 
     return (
         <>
