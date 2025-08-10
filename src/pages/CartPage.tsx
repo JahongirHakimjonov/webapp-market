@@ -2,6 +2,7 @@ import React, {useEffect} from "react"
 import {useCart} from "@/state/CartContext"
 import {formatUZS} from "@/lib/format"
 import {useMainButton} from "@/hooks/useTGButtons"
+import emptyGif from "@/assets/unknown.gif"
 
 export default function CartPage() {
     const {items, remove, clear} = useCart()
@@ -18,7 +19,6 @@ export default function CartPage() {
         }
     })
 
-    // Сброс MainButton при уходе со страницы
     useEffect(() => {
         return () => {
             const tg = (globalThis as any)?.Telegram?.WebApp
@@ -27,7 +27,12 @@ export default function CartPage() {
     }, [])
 
     if (items.length === 0) {
-        return <div className="hint">Korzinka bo‘sh.</div>
+        return (
+            <div style={{textAlign: "center", marginTop: 32}}>
+                <img src={emptyGif} alt="Korzinka bo‘sh" style={{maxWidth: 200}}/>
+                <div style={{marginTop: 12, color: "#888"}}>Korzinka bo‘sh.</div>
+            </div>
+        )
     }
 
     return (

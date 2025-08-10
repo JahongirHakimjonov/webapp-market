@@ -1,6 +1,7 @@
 import React from "react";
 import {catalog} from "@/data/catalog";
 import {ProductCard} from "@/components/ProductCard";
+import emptyGif from "@/assets/thinking.gif"; // Добавьте свой путь к GIF
 
 function SearchIcon() {
     return (
@@ -56,11 +57,18 @@ export default function SearchPage() {
             </div>
 
             <div style={{height: 8}}/>
-            <div className="grid">
-                {results.map((p) => (
-                    <ProductCard key={p.id} product={p}/>
-                ))}
-            </div>
+            {(!q.trim() || results.length === 0) ? (
+                <div style={{textAlign: "center", marginTop: 32}}>
+                    <img src={emptyGif} alt="Hech narsa topilmadi" style={{maxWidth: 200}}/>
+                    <div style={{marginTop: 12, color: "#888"}}>Hech narsa topilmadi</div>
+                </div>
+            ) : (
+                <div className="grid">
+                    {results.map((p) => (
+                        <ProductCard key={p.id} product={p}/>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
