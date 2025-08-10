@@ -1,19 +1,18 @@
-import React from 'react'
-import type {Product} from '../models/product'
+import React from "react"
+import { Link } from "react-router-dom"
+import type { Product } from "@/types"
+import { formatUZS } from "@/lib/format"
 
-type Props = { p: Product; onOpen: (id: number) => void }
-
-export default function ProductCard({p, onOpen}: Props) {
-    return (
-        <div className="product-card" tabIndex={0} onClick={() => onOpen(p.id)}
-             onKeyDown={(e) => e.key === 'Enter' && onOpen(p.id)}>
-            <div className="product-top">
-                <img src={p.images[0]} alt={p.title} loading="eager"/>
-            </div>
-            <div className="product-info">
-                <div className="product-price">{new Intl.NumberFormat('ru-RU').format(p.price)} UZS</div>
-                <div className="product-title">{p.title}</div>
-            </div>
+export function ProductCard({ product }: { product: Product }) {
+  return (
+    <Link to={`/product/${product.id}`} className="card">
+      <div className="p">
+        <div className="aspect-square">
+          <img src={product.image || "/placeholder.svg"} alt={product.title} />
         </div>
-    )
+        <div className="price">{formatUZS(product.price)}</div>
+        <div className="subtitle">{product.title}</div>
+      </div>
+    </Link>
+  )
 }

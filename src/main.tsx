@@ -1,13 +1,16 @@
-import React from 'react'
-import {createRoot} from 'react-dom/client'
-import App from './App'
-import './styles.css'
-import './types/types.d'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { BrowserRouter } from "react-router-dom"
+import App from "./App"
+import "./index.css"
+import { CartProvider } from "./state/CartContext"
 
-const root = document.getElementById('root') as HTMLElement
-
-createRoot(root).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <App/>
-    </React.StrictMode>
+        <BrowserRouter>
+            <CartProvider>
+                <App />
+            </CartProvider>
+        </BrowserRouter>
+    </React.StrictMode>,
 )
