@@ -1,9 +1,9 @@
 :root {
-    --bg: #ffffff;
-    --card: #ffffff;
-    --text: #0b1320;
-    --hint: #7b8794;
-    --accent: #1a8ad8;
+    --bg: var(--tg-theme-bg-color);
+    --card: var(--tg-theme-section-bg-color);
+    --text: var(--tg-theme-text-color);
+    --hint: var(--tg-theme-hint-color);
+    --accent: var(--tg-theme-button-color);
     --radius: 14px;
     --soft: #f4f6f8;
     --max-width: 420px;
