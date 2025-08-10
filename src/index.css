@@ -6,6 +6,7 @@
     --hint: var(--tg-theme-hint-color);
     --accent: var(--tg-theme-button-color);
     --accent-text: var(--tg-theme-button-text-color);
+    --section_separator_color: var(--tg-theme-section-separator-color);
     --radius-lg: 18px;
     --shadow-1: 0 6px 20px rgba(0, 0, 0, 0.08);
     --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -213,6 +214,8 @@ body {
 .tab.active {
     background: var(--accent);
     color: var(--accent-text);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(26, 138, 216, 0.15)
 }
 
 .skeleton {
