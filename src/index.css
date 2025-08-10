@@ -107,6 +107,11 @@ body {
     display: block;
 }
 
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .price {
     margin-top: 8px;
     font-weight: 800;
