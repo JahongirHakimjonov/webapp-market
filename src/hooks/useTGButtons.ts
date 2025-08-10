@@ -6,19 +6,24 @@ export function useBackButton(visible: boolean, onClick?: () => void) {
         const tg = (globalThis as any)?.Telegram?.WebApp
         const backButton = tg?.BackButton
 
-        if (!backButton) return
+        // Check if BackButton is supported (>= 6.1)
+        const isSupported = (() => {
+            if (!tg?.version) return false
+            const [major, minor] = tg.version.split('.').map(Number)
+            return major > 6 || (major === 6 && minor >= 1)
+        })()
+
+        if (!isSupported || !backButton) return
 
         const handler = () => {
-            if (typeof onClick === "function") {
-                onClick()
-            }
+            if (typeof onClick === "function") onClick()
         }
 
         if (visible) {
             try {
                 backButton.show?.()
+                // Use only the native BackButton click handler
                 backButton.onClick?.(handler)
-                tg.onEvent?.("backButtonClicked", handler)
             } catch (err) {
                 console.error("BackButton API error:", err)
             }
@@ -29,9 +34,9 @@ export function useBackButton(visible: boolean, onClick?: () => void) {
         return () => {
             try {
                 backButton.offClick?.(handler)
-                tg.offEvent?.("backButtonClicked", handler)
                 backButton.hide?.()
-            } catch {
+            } catch (err) {
+                console.error("BackButton cleanup error:", err)
             }
         }
     }, [visible, onClick])
