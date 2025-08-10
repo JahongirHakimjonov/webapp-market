@@ -3,7 +3,7 @@ import React from "react"
 export default function Header() {
   return (
     <header className="header">
-      <div className="title">Tirikchilik.uz</div>
+      <div className="title">MILLIYTECH.UZ</div>
       <div className="actions">
         <button
           className="icon-btn"
