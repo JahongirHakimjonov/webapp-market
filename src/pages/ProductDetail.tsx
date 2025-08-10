@@ -7,14 +7,13 @@ import {useBackButton, useMainButton} from "@/hooks/useTGButtons"
 
 export default function ProductDetail() {
     const {id} = useParams()
-    // useBackButton(true, () => history.back())
+    useBackButton(true, () => history.back())
 
     const product = catalog.products.find(p => p.id === id)
     const [color, setColor] = React.useState<string | null>(null)
     const [size, setSize] = React.useState<string | null>(null)
     const variant = React.useMemo(() => product?.variants?.find(v => v.colorName === color) || null, [product, color])
     const sizes = variant?.sizes ?? []
-    useBackButton(true, () => history.back())
     React.useEffect(() => {
         setSize(null)
     }, [color])
