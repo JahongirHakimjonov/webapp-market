@@ -33,29 +33,45 @@ function CategoriesIcon() {
 function CartIcon({count}: { count: number }) {
     return (
         <span style={{position: "relative", display: "inline-block"}}>
-      <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <circle cx="9" cy="21" r="1" fill="currentColor"/>
-        <circle cx="20" cy="21" r="1" fill="currentColor"/>
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h7.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor"
-              strokeWidth="2"/>
-      </svg>
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1" fill="currentColor"/>
+                <circle cx="20" cy="21" r="1" fill="currentColor"/>
+                <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h7.72a2 2 0 0 0 2-1.61L23 6H6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                />
+            </svg>
+
             {count > 0 && (
-                <span style={{
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    background: "red",
-                    color: "white",
-                    borderRadius: "50%",
-                    fontSize: "12px",
-                    padding: "2px 6px",
-                    minWidth: "20px",
-                    textAlign: "center"
-                }}>{count}</span>
+                <span
+                    style={{
+                        position: "absolute",
+                        top: "-4px",
+                        right: "-6px",
+                        background: "linear-gradient(135deg, #ff4d4f, #d9363e)",
+                        color: "white",
+                        borderRadius: "50%",
+                        fontSize: "11px",
+                        fontWeight: "bold",
+                        padding: "3px 6px",
+                        minWidth: "18px",
+                        height: "18px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+                        transform: "scale(1)",
+                        transition: "transform 0.2s ease",
+                    }}
+                >
+                    {count > 99 ? "99+" : count}
+                </span>
             )}
-    </span>
-    )
+        </span>
+    );
 }
+
 
 export default function BottomNav({cartCount}: { cartCount: number }) {
     const loc = useLocation()
