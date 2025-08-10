@@ -6,7 +6,7 @@ export default function CategoriesPage() {
     return (
         <div>
             <div className="h1">Kategoriyalar</div>
-            <div className="grid">
+            <div className="card">
                 {catalog.categories.map(cat => (
                     <Link key={cat.slug} to={`/categories/${cat.slug}`} className="card">
                         <div className="p">

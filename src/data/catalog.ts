@@ -14,7 +14,12 @@ export const catalog: Catalog = {
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
             subcategories: [{slug: "light", name: "Yengil"}, {slug: "heavy", name: "Qalin"}]
         },
-        {slug: "cap", name: "Kepkalar", image: "", subcategories: [{slug: "snapback", name: "Snapback"}]}
+        {
+            slug: "cap",
+            name: "Kepkalar",
+            image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+            subcategories: [{slug: "snapback", name: "Snapback"}]
+        }
     ],
     products: [
         {
