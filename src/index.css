@@ -253,7 +253,7 @@ body {
 }
 
 .swatch.selected {
-    color: var(--hint);
+    color: var(--text);
 }
 
 
@@ -262,7 +262,7 @@ body {
 }
 
 .size-btn.selected {
-    color: var(--hint);
+    color: var(--text);
 }
 
 .skeleton {
