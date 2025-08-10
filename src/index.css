@@ -5,9 +5,8 @@
     --text: var(--tg-theme-text-color);
     --hint: var(--tg-theme-hint-color);
     --accent: var(--tg-theme-button-color);
-    --accent-text: var(--tg-theme-button-text-color)
-
-    --radius-lg: 12px;
+    --accent-text: var(--tg-theme-button-text-color);
+    --radius-lg: 18px;
     --shadow-1: 0 6px 20px rgba(0, 0, 0, 0.08);
     --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
