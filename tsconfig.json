@@ -2,18 +2,24 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "ES2022"],
+    "lib": [
+      "DOM",
+      "ES2022"
+    ],
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   },
-  "include": ["src", "src/types"]
+  "include": [
+    "src",
+    "src/types"
+  ]
 }
