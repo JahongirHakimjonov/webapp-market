@@ -247,6 +247,15 @@ body {
     box-shadow: 0 18px 40px rgba(26, 138, 216, 0.15)
 }
 
+
+.swatch {
+    color: var(--text);
+}
+
+.swatch.selected {
+    color: var(--text);
+}
+
 .skeleton {
     height: 190px;
     background: rgba(0, 0, 0, 0.06);
