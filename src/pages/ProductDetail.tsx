@@ -86,11 +86,11 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      {size && (
-        <div style={{ marginTop: 16 }}>
-          <button className="btn block" onClick={handleAdd}>Qo‘shish</button>
-        </div>
-      )}
+      {/*{size && (*/}
+      {/*  <div style={{ marginTop: 16 }}>*/}
+      {/*    <button className="btn block" onClick={handleAdd}>Qo‘shish</button>*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </div>
   )
 }
