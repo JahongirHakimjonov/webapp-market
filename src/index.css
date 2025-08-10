@@ -256,6 +256,15 @@ body {
     color: var(--hint);
 }
 
+
+.size-btn {
+    color: var(--hint);
+}
+
+.size-btn.selected {
+    color: var(--hint);
+}
+
 .skeleton {
     height: 190px;
     background: rgba(0, 0, 0, 0.06);
