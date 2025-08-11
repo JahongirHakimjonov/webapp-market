@@ -57,7 +57,7 @@ body {
 }
 
 .icon-btn {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--section_separator_color);
     border-radius: 999px;
     width: 28px;
     height: 28px;
@@ -65,6 +65,20 @@ body {
     place-items: center;
     background: transparent;
     cursor: pointer;
+}
+
+.exit-icon-btn {
+    border: 1px solid var(--section_separator_color);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* уберите лишние отступы */
+    width: 32px;
+    height: 32px;
+    background: none;
+    cursor: pointer;
+    color: var(--text);
 }
 
 .grid {

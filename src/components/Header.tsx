@@ -6,7 +6,7 @@ export default function Header() {
             <div className="title">MILLIYTECH.UZ</div>
             <div className="actions">
                 <button
-                    className="icon-btn"
+                    className="exit-icon-btn"
                     title="Yopish"
                     onClick={() => {
                         const tg = (globalThis as any)?.Telegram?.WebApp
