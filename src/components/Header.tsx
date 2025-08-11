@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="header">
             <div className="title-with-cart">
-                <span className="title">MILLIYTECH.UZ</span>
+                <span className="title">Cool Market</span>
                 <span className="cart-icon">
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <circle cx="9" cy="21" r="1" fill="currentColor"/>
