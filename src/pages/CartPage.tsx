@@ -58,7 +58,6 @@ export default function CartPage() {
                 <div style={{fontSize: 18, fontWeight: 800}}>{formatUZS(total)}</div>
                 <div className="row">
                     <button className="btn ghost" onClick={clear}>Tozalash</button>
-                    <button className="btn">To‘lovga o‘tish</button>
                 </div>
             </div>
         </div>
