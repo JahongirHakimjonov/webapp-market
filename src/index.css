@@ -226,21 +226,20 @@ body {
 }
 
 .btn.ghost {
-    /* Background with smooth transparency */
     background: color-mix(in srgb, var(--accent) 12%, transparent);
     border: 1px solid var(--section_separator_color, #e5e7eb);
     color: var(--accent);
 
-    /* Padding & radius for better shape */
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    /* Smaller padding & rounded edges */
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.4rem;
 
     /* Smooth transitions */
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
-    /* Cursor & font adjustments */
     cursor: pointer;
     font-weight: 500;
+    font-size: 0.875rem; /* 14px */
 }
 
 .btn.ghost:hover {
@@ -249,8 +248,9 @@ body {
 }
 
 .btn.ghost:active {
-    background: color-mix(in srgb, var(--accent) 30%, transparent);
+    background: color-mix(in srgb, var(--accent) 28%, transparent);
 }
+
 
 
 .btn.block {
