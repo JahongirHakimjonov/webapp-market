@@ -140,11 +140,7 @@ body {
 
 .cart-icon {
     display: inline-block;
-    transition: transform 0.2s;
-}
-
-.cart-icon:hover {
-    animation: cart-spin 0.5s linear;
+    animation: cart-spin 0.8s linear infinite;
 }
 
 @keyframes cart-spin {
