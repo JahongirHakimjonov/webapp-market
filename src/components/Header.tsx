@@ -3,7 +3,24 @@ import React from "react"
 export default function Header() {
     return (
         <header className="header">
-            <div className="title">MILLIYTECH.UZ</div>
+            <div className="title-with-cart">
+                <span className="title">MILLIYTECH.UZ</span>
+                <span className="cart-icon">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="animated-cart"
+                    aria-hidden="true"
+                >
+                  <path d="M6 6h15l-1.5 9h-13z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <circle cx="9" cy="20" r="1" fill="currentColor"/>
+                  <circle cx="18" cy="20" r="1" fill="currentColor"/>
+                </svg>
+              </span>
+            </div>
             <div className="actions">
                 <button
                     className="exit-icon-btn"

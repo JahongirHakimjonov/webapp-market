@@ -131,6 +131,26 @@ body {
     transform: scale(1.1);
 }
 
+.title-with-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+}
+
+.animated-cart {
+    animation: cart-bounce 1s infinite alternate;
+}
+
+@keyframes cart-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
 
 .icon-wrapper {
     position: relative;
