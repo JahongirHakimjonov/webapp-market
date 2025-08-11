@@ -1,7 +1,7 @@
 import React from "react";
 import {catalog} from "@/data/catalog";
 import {ProductCard} from "@/components/ProductCard";
-import emptyGif from "@/assets/thinking.gif"; // Добавьте свой путь к GIF
+import emptyGif from "@/assets/searching.gif"; // Добавьте свой путь к GIF
 
 function SearchIcon() {
     return (
