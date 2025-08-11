@@ -225,10 +225,9 @@ body {
 }
 
 .btn.ghost {
-    background: transparent;
+    background: color-mix(in srgb, var(--accent) 18%, transparent);;
     border: 1px solid var(--section_separator_color);
     color: var(--text);
-    box-shadow: 0 18px 30px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 .btn.block {
