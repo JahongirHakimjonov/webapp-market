@@ -8,7 +8,7 @@
     --accent-text: var(--tg-theme-button-text-color);
     --section_separator_color: var(--tg-theme-section-separator-color);
     --radius-lg: 18px;
-    --shadow-1: 0 1px 5px var(--tg-theme-hint-color);
+    --shadow-1: 0 1px 5px color-mix(in srgb, var(--accent) 18%, transparent);
     --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
