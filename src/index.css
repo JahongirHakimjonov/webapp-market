@@ -226,11 +226,32 @@ body {
 }
 
 .btn.ghost {
-    background: rgba(0, 0, 0, 0.06); /* fallback */
-    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    /* Background with smooth transparency */
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
     border: 1px solid var(--section_separator_color, #e5e7eb);
     color: var(--accent);
+
+    /* Padding & radius for better shape */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    /* Smooth transitions */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+    /* Cursor & font adjustments */
+    cursor: pointer;
+    font-weight: 500;
 }
+
+.btn.ghost:hover {
+    background: color-mix(in srgb, var(--accent) 20%, white 5%);
+    border-color: var(--accent);
+}
+
+.btn.ghost:active {
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
 
 .btn.block {
     width: 100%;
