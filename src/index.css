@@ -251,6 +251,13 @@ body {
     background: color-mix(in srgb, var(--accent) 28%, transparent);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: none;
+}
 
 
 .btn.block {
