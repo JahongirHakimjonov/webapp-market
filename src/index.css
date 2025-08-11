@@ -138,16 +138,21 @@ body {
     color: var(--text);
 }
 
-.animated-cart {
-    animation: cart-bounce 1s infinite alternate;
+.cart-icon {
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
-@keyframes cart-bounce {
+.cart-icon:hover {
+    animation: cart-spin 0.5s linear;
+}
+
+@keyframes cart-spin {
     0% {
-        transform: translateY(0);
+        transform: rotate(0deg);
     }
     100% {
-        transform: translateY(-5px);
+        transform: rotate(360deg);
     }
 }
 
