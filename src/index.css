@@ -201,6 +201,7 @@ body {
 .row {
     display: flex;
     gap: 8px;
+    justify-content: flex-start; /* или center для центрирования */
 }
 
 .input {
@@ -225,8 +226,9 @@ body {
 }
 
 .btn.ghost {
-    background: color-mix(in srgb, var(--accent) 18%, transparent);;
-    border: 1px solid var(--section_separator_color);
+    background: rgba(0, 0, 0, 0.06); /* fallback */
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    border: 1px solid var(--section_separator_color, #e5e7eb);
     color: var(--text);
 }
 
