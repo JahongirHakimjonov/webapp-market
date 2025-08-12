@@ -1,14 +1,14 @@
 :root {
     /* Telegram native theme variables mapping (with fallbacks) */
-    --bg: var(--tg-theme-bg-color);
-    --card: var(--tg-theme-section-bg-color);
-    --text: var(--tg-theme-text-color);
-    --hint: var(--tg-theme-hint-color);
-    --accent: var(--tg-theme-button-color);
-    --accent-text: var(--tg-theme-button-text-color);
-    --section_separator_color: var(--tg-theme-section-separator-color);
+    --bg: var(--tg-theme-bg-color, #f8f9fa);
+    --card: var(--tg-theme-section-bg-color, #ffffff);
+    --text: var(--tg-theme-text-color, #212529);
+    --hint: var(--tg-theme-hint-color, #6c757d);
+    --accent: var(--tg-theme-button-color, #007bff);
+    --accent-text: var(--tg-theme-button-text-color, #ffffff);
+    --section_separator_color: var(--tg-theme-section-separator-color, #e9ecef);
     --radius-lg: 18px;
-    --shadow-1: 0 1px 5px color-mix(in srgb, var(--tg-theme-hint-color) 18%, transparent);
+    --shadow-1: 0 1px 5px color-mix(in srgb, var(--tg-theme-hint-color, #6c757d) 18%, transparent);
     --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 

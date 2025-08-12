@@ -11,6 +11,7 @@ import CartPage from "./pages/CartPage";
 import {useTelegramTheme} from "./hooks/useTelegramTheme";
 import {useBackButton} from "./hooks/useTGButtons";
 import {useCart} from "./state/CartContext";
+import ProductsPage from "@/pages/ProductsPage";
 
 
 export default function App() {
@@ -39,7 +40,8 @@ export default function App() {
                     <Route path="/" element={<HomeLatest/>}/>
                     <Route path="/search" element={<SearchPage/>}/>
                     <Route path="/categories" element={<CategoriesPage/>}/>
-                    <Route path="/categories/:slug" element={<CategoryDetail/>}/>
+                    <Route path="/categories/:categoryId" element={<CategoryDetail/>}/>
+                    <Route path="/subcategories/:subCategoryId" element={<ProductsPage/>}/>
                     <Route path="/product/:id" element={<ProductDetail/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<HomeLatest/>}/>

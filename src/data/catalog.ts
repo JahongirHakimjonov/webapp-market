@@ -3,31 +3,76 @@ import type {Catalog} from "@/types"
 export const catalog: Catalog = {
     categories: [
         {
+            id: 1,
             slug: "tshirt",
             name: "Futbolkalar",
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
-            subcategories: [{slug: "basic", name: "Oddiy"}, {slug: "print", name: "Printli"}]
+            subcategories: [{
+                id: 3,
+                slug: "basic",
+                name: "Oddiy",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+            }, {
+                id: 4,
+                slug: "print",
+                name: "Printli",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+            }]
         },
         {
+            id: 2,
             slug: "hoodie",
             name: "Xudi",
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
-            subcategories: [{slug: "light", name: "Yengil"}, {slug: "heavy", name: "Qalin"}]
+            subcategories: [
+                {
+                    id: 1,
+                    slug: "light",
+                    name: "Yengil",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                },
+                {
+                    id: 2,
+                    slug: "heavy",
+                    name: "Qalin",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }
+            ]
         },
         {
+            id: 3,
             slug: "cap",
             name: "Kepkalar",
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
-            subcategories: [{slug: "snapback", name: "Snapback"}]
+            subcategories: [{
+                id: 5,
+                slug: "snapback",
+                name: "Snapback",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+            }]
         }
     ],
     products: [
         {
-            id: "p1",
+            id: 1,
             title: "Yasha T-shirt",
             price: 230000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "tshirt",
+            category: {
+                id: 1,
+                slug: "tshirt",
+                name: "Futbolkalar",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [{
+                    id: 3, slug: "basic", name: "Oddiy",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }, {
+                    id: 4,
+                    slug: "print",
+                    name: "Printli",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }]
+            },
             subcategory: "print",
             description: "Futbolka 100% paxta, kundalik kiyim uchun qulay.",
             featured: true,
@@ -38,11 +83,23 @@ export const catalog: Catalog = {
             ]
         },
         {
-            id: "p2",
+            id: 2,
             title: "Purple Tee",
             price: 250000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "tshirt",
+            category: {
+                id: 1,
+                slug: "tshirt",
+                name: "Futbolkalar",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [{
+                    id: 3, slug: "basic", name: "Oddiy",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }, {
+                    id: 4, slug: "print", name: "Printli",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }]
+            },
             subcategory: "print",
             description: "Yumshoq mato va sifatli bo‘yoq.",
             featured: true,
@@ -50,11 +107,30 @@ export const catalog: Catalog = {
             variants: [{colorName: "Purple", colorHex: "#a78bfa", sizes: ["L", "XL"]}]
         },
         {
-            id: "p3",
+            id: 3,
             title: "Classic Hoodie",
             price: 350000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "hoodie",
+            category: {
+                id: 2,
+                slug: "hoodie",
+                name: "Xudi",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [
+                    {
+                        id: 1,
+                        slug: "light",
+                        name: "Yengil",
+                        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                    },
+                    {
+                        id: 2,
+                        slug: "heavy",
+                        name: "Qalin",
+                        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                    }
+                ]
+            },
             subcategory: "light",
             description: "Yengil huddi, bahor va kuz uchun.",
             featured: false,
@@ -65,11 +141,30 @@ export const catalog: Catalog = {
             ]
         },
         {
-            id: "p4",
+            id: 4,
             title: "Heavy Hoodie",
             price: 420000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "hoodie",
+            category: {
+                id: 2,
+                slug: "hoodie",
+                name: "Xudi",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [
+                    {
+                        id: 1,
+                        slug: "light",
+                        name: "Yengil",
+                        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                    },
+                    {
+                        id: 2,
+                        slug: "heavy",
+                        name: "Qalin",
+                        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                    }
+                ]
+            },
             subcategory: "heavy",
             description: "Sovuq kunlar uchun qalin huddi.",
             featured: true,
@@ -77,11 +172,22 @@ export const catalog: Catalog = {
             variants: [{colorName: "Black", colorHex: "#111827", sizes: ["L", "XL", "XXL"]}]
         },
         {
-            id: "p5",
+            id: 5,
             title: "City Cap",
             price: 150000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "cap",
+            category: {
+                id: 3,
+                slug: "cap",
+                name: "Kepkalar",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [{
+                    id: 5,
+                    slug: "snapback",
+                    name: "Snapback",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }]
+            },
             subcategory: "snapback",
             description: "Shahar uslubidagi qulay kepka.",
             featured: true,
@@ -92,11 +198,25 @@ export const catalog: Catalog = {
             ]
         },
         {
-            id: "p6",
+            id: 6,
             title: "Basic T-shirt",
             price: 190000,
             image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-front-PD00uXKjTsu6vr8kVTaiDuXOCWkCFl.png",
-            category: "tshirt",
+            category: {
+                id: 1,
+                slug: "tshirt",
+                name: "Futbolkalar",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png",
+                subcategories: [{
+                    id: 3, slug: "basic", name: "Oddiy",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }, {
+                    id: 4,
+                    slug: "print",
+                    name: "Printli",
+                    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/hoodie-category-Ddf8RDG8gcwdSsRMUZ7K3VTUT5B4SB.png"
+                }]
+            },
             subcategory: "basic",
             description: "Oddiy va sifatli futbolka.",
             featured: false,

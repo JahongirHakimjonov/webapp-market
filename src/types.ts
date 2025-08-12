@@ -1,30 +1,38 @@
 export type Variant = {
-  colorName: string
-  colorHex?: string
-  sizes: string[]
+    colorName: string
+    colorHex?: string
+    sizes: string[]
 }
 
-export type Product = {
-  id: string
-  title: string
-  price: number
-  image?: string
-  category: string
-  subcategory: string
-  description?: string
-  keywords?: string[]
-  featured?: boolean
-  variants?: Variant[]
+export type SubCategory = {
+    id: number
+    slug: string
+    name: string
+    image: string
 }
 
 export type Category = {
-  slug: string
-  name: string
-  image?: string
-  subcategories?: { slug: string; name: string }[]
+    id: number
+    slug: string
+    name: string
+    image?: string
+    subcategories?: SubCategory[]
+}
+
+export type Product = {
+    id: number
+    title: string
+    price: number
+    image?: string
+    category: Category
+    subcategory: string
+    description?: string
+    keywords?: string[]
+    featured?: boolean
+    variants?: Variant[]
 }
 
 export type Catalog = {
-  categories: Category[]
-  products: Product[]
+    categories: Category[]
+    products: Product[]
 }

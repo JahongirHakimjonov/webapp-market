@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react"
 
 export type CartItem = {
-  id: string
+  id: number
   title: string
   price: number
   image: string

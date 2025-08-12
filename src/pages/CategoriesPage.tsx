@@ -8,7 +8,7 @@ export default function CategoriesPage() {
             <div className="h1">Kategoriyalar</div>
             <div className="grid">
                 {catalog.categories.map(cat => (
-                    <Link key={cat.slug} to={`/categories/${cat.slug}`} className="card">
+                    <Link key={cat.id} to={`/categories/${cat.id}`} className="card">
                         <div className="p">
                             <div className="aspect-square">
                                 <img src={cat.image || "/placeholder.svg"} alt={cat.name}/>

@@ -9,7 +9,7 @@ export default function ProductDetail() {
     const {id} = useParams()
     useBackButton(true, () => history.back())
 
-    const product = catalog.products.find(p => p.id === id)
+    const product = catalog.products.find(p => p.id === Number(id))
     const [color, setColor] = React.useState<string | null>(null)
     const [size, setSize] = React.useState<string | null>(null)
     const variant = React.useMemo(() => product?.variants?.find(v => v.colorName === color) || null, [product, color])
@@ -23,7 +23,7 @@ export default function ProductDetail() {
     const handleAdd = React.useCallback(() => {
         if (!product || !size) return
         add({
-            id: String(product.id),
+            id: Number(product.id),
             title: product.title,
             price: product.price,
             image: product.image || "/placeholder.svg",
