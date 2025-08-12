@@ -5,8 +5,8 @@ import BottomNav from "./components/BottomNav";
 import HomeLatest from "./pages/HomeLatest";
 import SearchPage from "./pages/SearchPage";
 import CategoriesPage from "./pages/CategoriesPage";
-import CategoryDetail from "./pages/CategoryDetail";
-import ProductDetail from "./pages/ProductDetail";
+import SubcategoriesPage from "./pages/SubcategoriesPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import {useTelegramTheme} from "./hooks/useTelegramTheme";
 import {useBackButton} from "./hooks/useTGButtons";
@@ -40,9 +40,9 @@ export default function App() {
                     <Route path="/" element={<HomeLatest/>}/>
                     <Route path="/search" element={<SearchPage/>}/>
                     <Route path="/categories" element={<CategoriesPage/>}/>
-                    <Route path="/categories/:categoryId" element={<CategoryDetail/>}/>
+                    <Route path="/categories/:categoryId" element={<SubcategoriesPage/>}/>
                     <Route path="/subcategories/:subCategoryId" element={<ProductsPage/>}/>
-                    <Route path="/product/:id" element={<ProductDetail/>}/>
+                    <Route path="/product/:id" element={<ProductDetailPage/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<HomeLatest/>}/>
                 </Routes>

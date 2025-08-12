@@ -6,23 +6,28 @@ export default function CategoriesPage() {
     return (
         <div>
             <div className="h1">Kategoriyalar</div>
+
             <div className="grid">
                 {catalog.categories.map(cat => (
                     <Link key={cat.id} to={`/categories/${cat.id}`} className="card">
                         <div className="p">
                             <div className="aspect-square">
-                                <img src={cat.image || "/placeholder.svg"} alt={cat.name}/>
+                                <img src={cat.image || "/placeholder.svg"} alt={cat.name || "category"}/>
                             </div>
-                            <div className="price" style={
-                                {
+
+                            <div
+                                className="price"
+                                style={{
                                     fontSize: 16,
                                     marginTop: "0.5rem",
                                     marginBottom: "0.5rem",
                                     fontWeight: "normal",
                                     alignItems: "center",
-                                    textAlign: "center"
-                                }
-                            }>{cat.name}</div>
+                                    textAlign: "center",
+                                }}
+                            >
+                                {cat.name}
+                            </div>
                         </div>
                     </Link>
                 ))}

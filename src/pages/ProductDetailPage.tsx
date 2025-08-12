@@ -5,7 +5,7 @@ import {formatUZS} from "@/lib/format"
 import {useCart} from "@/state/CartContext"
 import {useBackButton, useMainButton} from "@/hooks/useTGButtons"
 
-export default function ProductDetail() {
+export default function ProductDetailPage() {
     const {id} = useParams()
     useBackButton(true, () => history.back())
 
