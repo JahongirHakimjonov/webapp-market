@@ -6,10 +6,10 @@ import {useCart} from "@/state/CartContext"
 import {useBackButton, useMainButton} from "@/hooks/useTGButtons"
 
 export default function ProductDetailPage() {
-    const {id} = useParams()
+    const {productId} = useParams()
     useBackButton(true, () => history.back())
 
-    const product = catalog.products.find(p => p.id === Number(id))
+    const product = catalog.products.find(p => p.id === Number(productId))
     const [color, setColor] = React.useState<string | null>(null)
     const [size, setSize] = React.useState<string | null>(null)
     const variant = React.useMemo(() => product?.variants?.find(v => v.colorName === color) || null, [product, color])

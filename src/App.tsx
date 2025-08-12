@@ -42,7 +42,7 @@ export default function App() {
                     <Route path="/categories" element={<CategoriesPage/>}/>
                     <Route path="/categories/:categoryId" element={<SubcategoriesPage/>}/>
                     <Route path="/subcategories/:subCategoryId" element={<ProductsPage/>}/>
-                    <Route path="/product/:id" element={<ProductDetailPage/>}/>
+                    <Route path="/product/:productId" element={<ProductDetailPage/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<HomeLatest/>}/>
                 </Routes>
